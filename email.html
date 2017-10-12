@@ -1,0 +1,77 @@
+<html> 
+    <style>
+        body{
+            margin: 0;
+        }
+        .main{
+            height: 100vh;
+            background-color: aliceblue;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #box{
+            text-align: center;
+            height: 500px;
+            width: 600px;
+            background-color: papayawhip;
+        }
+        .btn{
+            padding-top: 10%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #change{
+            margin: 20px;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #list{
+            color: red;
+            font-size: 20px;            
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            display:flex;
+        }
+        #list{
+            color: blue;
+            height: 200px;
+            padding-top: 5%;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+    </style>
+<body>
+  <div class="main">
+      <div id="box">
+          <div id="change">The following copy is sent to virat@chiku.com and is forwarded to nehra@ashu.com. If the maiI has some error then send to ravindra@jaad.com. If the mail has poor language then send it to sehwag@viru.com.
+          </div>
+          <p><b>Submit button pe click hone pe ek div me append ho jayenge.</b></p>
+          <div class="btn">
+            <button type="button" name="submit" onclick="search();">Submit</button>
+            </div>
+          <div id="list">
+          </div>
+      </div>
+    </div> 
+    <script type="text/javascript"> 
+function search(){
+       var paragraph = ["The", "following", "copy", "is", "sent", "to", "virat@chiku.com", "and", "is", "forwarded", "to", "nehra@ashu.com", "If", "the", "maiI", "has", "some", "error", "then", "sendto", "ranjan@gmail.com", "ravindra@jaad.com", "If", "the", "mail", "has", "poor", "language", "then", "send", "it", "to", "sehwag@viru.com"];
+    var email = [];
+    for (var i = 0; i < paragraph.length; i++){
+        if (paragraph[i].indexOf ("@") > -1){
+            email.push(paragraph[i] + " </br>");
+        } 
+
+        document.getElementById("list").innerHTML =  email;
+    }
+}
+</script>
+</body>
+</html>
